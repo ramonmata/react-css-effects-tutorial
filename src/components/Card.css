@@ -1,0 +1,114 @@
+.card {
+    cursor: pointer;
+    position: relative;
+    width: 450px;
+    height: 250px;
+    padding: 10px 15px 15px 10px;
+    margin-top: 50px;
+    border-radius: 2px;
+    background-color: black ;
+    background: url("../images/card-bg.jpg");
+    background-size: cover;
+    box-shadow: 
+    /* Top Shadow */
+    0px -10px 10px rgba(0,0,0,0.2),
+
+    /* Bottom Shadow */
+    0px -10px 20px rgba(0,0,0,0.4),
+
+    /* Left Shadow */
+    -10px 0px 20px rgba(0,0,0,0.4),
+
+    /* Right Shadow */
+    10px 0px 20px rgba(0,0,0,0.4),
+
+    /* Inner Shadow */
+    inset 1px 1px 20px rgba(0,0,0,0.4)
+    ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.5s;
+}
+
+.company-text {
+    font-size: 26px;
+    letter-spacing: 2px;
+    word-spacing: 6px;
+    padding-top: 20px;
+    color: transparent;
+    background: url("../images/gold.jpg");
+    background-size: cover;
+    background-clip: text;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.1);
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    background: url("../images/gold.jpg");
+    background-size: cover;
+    mask: url("../images/logo.svg");
+    
+}
+
+.card.back .left {
+    position: absolute;
+    left: 30px;
+    top: 25px;
+    color: transparent;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.card.back .right {
+    position: absolute;
+    width: 200px;
+    right: 10px;
+    bottom: 20px;
+    font-weight: 700;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    background: url("../images/gold.jpg");
+    background-clip: text;
+    background-size: cover;
+    filter: grayscale(100%) brightness(120%);
+}
+
+.name-text {
+    font-size: 32px;
+    word-spacing: 8px;
+    background: url("../images/gold.jpg");
+    background-clip: text;
+    background-size: cover;
+    filter: grayscale(100%) brightness(120%);
+}
+
+.role-text {
+    font-size: 18px;
+    background: url("../images/gold.jpg");
+    background-clip: text;
+    background-size: cover;
+    filter: grayscale(40%);
+}
+
+.card.front {
+    transform: rotateZ(-7deg);
+    left: -15%;
+}
+
+.card.back {
+    transform: rotateZ(4deg);
+    left: 10%;
+    top: -5%
+}
+
+.card:hover {
+    z-index: 1;
+    transform: scale(1.29);
+}
+
+.card:hover .logo {
+    mask: url("../images/logo_over.svg");
+}
