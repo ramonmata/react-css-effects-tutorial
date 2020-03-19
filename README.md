@@ -1,6 +1,6 @@
 # React Conversion for JavaScript Tutorial
 
-![alt](sample.png)
+![alt](sample.jpg)
 
 ## Credits
 
